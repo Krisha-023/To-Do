@@ -4,38 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ToDo</title>
     <link rel="stylesheet" href="styles.css" />
+    <title>ToDo</title>
   </head>
-
   <body>
-    <header>
-      <h1>To-Do List</h1>
-      <form id="todo-form">
-        <input
-          type="text"
-          id="new-item"
-          placeholder="Add new item to list..."
-        />
-        <input type="submit" id="item-submit" value="Add Item" />
-      </form>
-    </header>
-    <main>
-      <section class="list-items">
-        <h2 id="h2">List</h2>
-        <div id="list">
-          <div class="list">
-            <div class="content">
-              <input type="text" class="text" value="items" readonly />
-            </div>
-            <div class="actions">
-              <button id="btn1" class="edit">Edit</button>
-              <button id="btn2" class="delete">Delete</button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+    <div class="container">
+      <div class="input-container">
+        <h1>To Do List</h1>
+        <input type="text" placeholder="Add a new item..." id="inputBox" />
+        <input type="button" value="Add" id="addBtn" />
+      </div>
+
+      <ul class="todoList" id="todoList">
+        <!-- <li><p>Task1</p></li>
+            <li>Task2</li>
+            <li>Task3</li> -->
+      </ul>
+    </div>
+
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>

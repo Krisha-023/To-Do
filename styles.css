@@ -1,149 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
+  background-color: rgb(232, 238, 238);
+}
+
+.container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  background: #374151;
-  color: #fff;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
-header {
-  padding: 2rem 1rem;
-  max-width: 800px;
+.input-container {
   width: 100%;
-  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+  padding: 20px;
 }
 
-header h1 {
-  font-size: 2rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  color: #6b7280;
-}
-
-#todo-form {
-  display: flex;
-}
-
-input,
-button {
-  appearance: none;
-  outline: none;
+.input-container input {
   border: none;
-  background: none;
+  outline: none;
+  padding: 12px;
+  margin-block: 12px;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
-#new-item {
-  flex: 1 1 0%;
-  background: #1f2937;
-  padding: 1rem;
-  border-radius: 1rem;
-  margin-right: 1rem;
-  color: #eee;
-  font-size: 1.25rem;
+.input-container input[type="text"] {
+  width: 70%;
 }
 
-#new-item::placeholder {
-  color: #6b7280;
-}
-
-#item-submit {
-  color: #ec4899;
-  font-size: 1.25rem;
-  font-size: 700;
-  background-image: linear-gradient(to right, #ec4899, #8b5cf6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-#item-submit :hover {
-  opacity: 0.8;
-}
-
-#item-submit :active {
-  opacity: 0.6;
-}
-
-main {
-  flex: 1 1 0%;
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-.list-item {
-  padding: 1rem;
-}
-
-.list-item h2 {
-  font-size: 2rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  color: #6b7280;
-}
-
-#h2 {
-  margin-bottom: 1rem;
-}
-
-#list .list {
-  display: flex;
-  justify-content: space-between;
-  background-color: #111827;
-  padding: 1rem;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-}
-
-#list .list .content .text {
-  color: #eee;
-  font-size: 1.125rem;
-  width: 100%;
-  display: block;
-  transition: 0.4s;
-}
-
-#list .list .content .text :not(:read-only) {
-  color: #ec4899;
-}
-
-#list .list .actions {
-  display: flex;
-  margin: 0 -0.5rem;
-}
-
-#btn1,
-#btn2 {
-  cursor: pointer;
-  margin: 0 0.5rem;
-  font-size: 1rem;
+.input-container input[type="button"] {
+  background-color: #3da33d;
+  color: #fff;
   font-weight: 700;
-  text-transform: uppercase;
-  transition: 0.4s;
+  margin-left: 8px;
+  cursor: pointer;
+  padding: 12px 24px;
 }
 
-.list .actions .button {
-  opacity: 0.8;
+.input-container input[type="button"]:hover {
+  background-color: #60b160;
 }
 
-.list .actions .button {
-  opacity: 0.6;
+ul {
+  width: 70%;
+  max-width: 450px;
 }
 
-.list .actions .edit {
-  background-image: linear-gradient(to right, #ec4899, #8b5cf6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+ul li {
+  list-style-type: none;
+  cursor: pointer;
+  margin-block-end: 12px;
+  border-radius: 8px;
+  border: 0.125px solid #a19f9f;
+  padding: 6px 12px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.5s;
 }
 
-.list .actions .delete {
-  color: crimson;
+ul li:hover {
+  background-color: #cbcaca;
+}
+
+ul li p {
+  flex-grow: 1;
+  padding: 2px;
+}
+.btn {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: none;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.deleteBtn {
+  color: #ff0000;
+}
+
+.editBtn {
+  color: #008000;
 }
